@@ -4,7 +4,7 @@
 #include <Wire.h>
 #include "consts.h"
 
-//Create interrputs functions and variables
+//Create interrupts functions and variables
 unsigned long rr_encoder_counter, lr_encoder_counter, lf_encoder_counter, rf_encoder_counter;
 unsigned long rr_encoder_old_counter, lr_encoder_old_counter, lf_encoder_old_counter, rf_encoder_old_counter;
 unsigned long time_;
