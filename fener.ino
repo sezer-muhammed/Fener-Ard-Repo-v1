@@ -3,7 +3,7 @@
 #include <Adafruit_PWMServoDriver.h>
 #include <Wire.h>
 #include "consts.h"
-//Arda Abi e e waka waka eee eee
+// The main code of Fener's Arduino
 //Create interrupts functions and variables
 unsigned long rr_encoder_counter, lr_encoder_counter, lf_encoder_counter, rf_encoder_counter;
 unsigned long rr_encoder_old_counter, lr_encoder_old_counter, lf_encoder_old_counter, rf_encoder_old_counter;
