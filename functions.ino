@@ -1,5 +1,8 @@
+// This is .ino file for Fener's Arduino Functions
+
 #include "consts.h"
 
+// Prints variables on Serial Monitor
 void debug_printer() {
 
     Serial.print(steer_pid_input); Serial.print("  ");
@@ -8,6 +11,7 @@ void debug_printer() {
     
   Serial.println(" ");
 }
+
 
 int second_steering_angle(int Degree) {
     /*

@@ -4,7 +4,7 @@
 #include <Wire.h>
 #include "consts.h"
 // The main code of Fener's Arduino
-//Create interrupts functions and variables
+// Create interrupts functions and variables
 unsigned long rr_encoder_counter, lr_encoder_counter, lf_encoder_counter, rf_encoder_counter;
 unsigned long rr_encoder_old_counter, lr_encoder_old_counter, lf_encoder_old_counter, rf_encoder_old_counter;
 unsigned long time_;
@@ -14,11 +14,11 @@ void rf_encoder_interrupt() {rf_encoder_counter = rf_encoder_counter + 1;}
 void lr_encoder_interrupt() {lr_encoder_counter = lr_encoder_counter + 1;}
 void rr_encoder_interrupt() {rr_encoder_counter = rr_encoder_counter + 1;}
 
-//Create controlled objects for steering and motors
+// Create controlled objects for steering and motors
 double lr_pid_input = 0, lr_pid_output, lr_pid_setpoint = 0;
 double rr_pid_input = 0, rr_pid_output, rr_pid_setpoing = 0;
 double steer_pid_input, steer_pid_output, steer_pid_setpoing;
-
+// Create PID variables with PID lib
 PID PID_left_motor(&lr_pid_input, &lr_pid_output, &lr_pid_setpoint, 17, 10, .03, DIRECT);
 PID PID_right_motor(&rr_pid_input, &rr_pid_output, &rr_pid_setpoing, 15, 7, .04, DIRECT);
 PID PID_steering(&steer_pid_input, &steer_pid_output, &steer_pid_setpoing, 0.3, 0.004, 0.05, DIRECT);
@@ -40,6 +40,8 @@ Servo left_motor, right_motor;
 Adafruit_PWMServoDriver servo_driver = Adafruit_PWMServoDriver(0x40);
 int steering_remote_array[6], steering_remote_array_counter;
 
+
+//Start and set necessary parts(Servo driver, Serial Communication, Digital pins,)
 void setup() {
   servo_driver.begin();
   servo_driver.setPWMFreq(333);
@@ -79,9 +81,10 @@ void setup() {
   PID_steering.SetOutputLimits(-300, 300);
 }
 
+
 void loop() {
   update_command_array();
-
+  //finds drive_mode and use necessary functions
   int drive_mode = command_array[3];
   drive_mode = 1;
   if (drive_mode == 0) { //drive via RC
@@ -93,6 +96,6 @@ void loop() {
 
   update_speed_setpoints(speed_req);
 
-
+  // ***
   if ((time_ + 100) < millis()) {update_execute_pid();}
 }
