@@ -16,8 +16,8 @@
 #define ENCODER_RR 7        // The pin number of Right Rear Encoder
 #define ENCODER_LR 6        // The pin number of Left Rear Encoder
 
-#define RC_CHANNEL_ONE A0   // ***
-#define RC_CHANNEL_TWO A1   // ***
+#define RC_CHANNEL_ONE A0   // RC Receiver for speed
+#define RC_CHANNEL_TWO A1   // RC Receiver for angle
 
 #define R_R 650             // Right Servo-Motor's Max Right Value
 #define R_L 1125            // Right Servo-Motor's Max Left Value
