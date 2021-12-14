@@ -2,7 +2,7 @@
 
 #include "consts.h"
 
-// Prints variables on Serial Monitorwdwd
+// Prints variables on Serial Monitor
 void debug_printer() {
 
     Serial.print(steer_pid_input); Serial.print("  ");
