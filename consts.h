@@ -5,8 +5,8 @@
 #define FrontRearMm 430     // Distance between front and back wheels
 #define WheelPerimeter 245  // Wheel Perimeter
 
-#define LEFT_SERVO_PIN 7    // The pin number of Left Servo-Motor
-#define RIGHT_SERVO_PIN 5   // The pin number of Right Servo-Motor
+#define LEFT_SERVO_PIN 7    // The pin number of Left Servo-Motor on the Servo Driver Card
+#define RIGHT_SERVO_PIN 5   // The pin number of Right Servo-Motor on the Servo Driver Card
 
 #define LEFT_MOTOR_PIN 9    // The pin number of Left Back Motor
 #define RIGHT_MOTOR_PIN 10  // The pin number of Right Back Motor
