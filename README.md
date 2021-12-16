@@ -74,6 +74,6 @@ If you have any feedback please send an email to muhammed.sezer@metu.edu.tr
 
 ### Thanks
 
-- [@katherinepeterson](https://www.github.com/octokatherine) For [readme.so]().
+- [@katherinepeterson](https://www.github.com/octokatherine) For [readme.so](https://readme.so).
 
   
