@@ -92,6 +92,7 @@ void loop() {
   }
   else if (drive_mode == 1) { //drive via jetson nano
     speed_req = {command_array[0] / 100.0, (- command_array[1] + 1500) + command_array[2]};
+    if (speed_req.angular == 0) PID_steering.Initialize()
   }
 
   update_speed_setpoints(speed_req);
