@@ -51,6 +51,7 @@ Required connections are listed below. You also can find a graph that shows thes
 | ESCs to pin **9** and **10** |
 | **I2C** pins of the **Servo Driver** |
 | USB Cable of **Jetson Nano** |
+
 | Encoders to pin **4, 5, 6,** and **7** |
 | RC Receiver to pin **A0, A1, GND,** and **5v** |
 
@@ -60,8 +61,11 @@ Required connections are listed below. You also can find a graph that shows thes
 | USB Cable of **Arduino** |
 
 
-
+### Complete Schematic
 ![fener_architecture](https://user-images.githubusercontent.com/74321576/146676065-4ae206fa-0116-4e08-8090-edcc8398da87.jpg)
+
+### Example Wiring
+![Fener Jetson, ESC, Arduino, Servo sürücü, RC, Pil Tepeden](https://user-images.githubusercontent.com/74321576/146676112-9193da67-8d9f-4756-af2d-0668653eaa6c.JPG)
 
 ## Feedback
 
