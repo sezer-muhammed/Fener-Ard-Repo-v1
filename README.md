@@ -71,7 +71,7 @@ Required connections are listed below. You also can find a graph that shows thes
 If you have any feedback please send an email to muhammed.sezer@metu.edu.tr
 
   
-## Contributers
+## Contributors
 
 - [@sezer-muhammed](https://www.youtube.com/c/IMSezer)
 
