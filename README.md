@@ -51,7 +51,6 @@ Required connections are listed below. You also can find a graph that shows thes
 | ESCs to pin **9** and **10** |
 | **I2C** pins of the **Servo Driver** |
 | USB Cable of **Jetson Nano** |
-
 | Encoders to pin **4, 5, 6,** and **7** |
 | RC Receiver to pin **A0, A1, GND,** and **5v** |
 
