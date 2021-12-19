@@ -61,7 +61,7 @@ Required connections are listed below. You also can find a graph that shows thes
 
 
 
-`TODO` Görseller ve tam açıklamalar eklenecek, komponentler tanıtılacak
+![fener_architecture](https://user-images.githubusercontent.com/74321576/146676065-4ae206fa-0116-4e08-8090-edcc8398da87.jpg)
 
 ## Feedback
 
@@ -76,4 +76,4 @@ If you have any feedback please send an email to muhammed.sezer@metu.edu.tr
 
 - [@katherinepeterson](https://www.github.com/octokatherine) For [readme.so](https://readme.so).
 
-  
+ 
