@@ -11,7 +11,7 @@ It regularly receives IMU data from Jetson Nano, and sends encoder data to Jetso
 
 This project is related to these project listed below.
 
-[Fener Vehicle ROS2](https://github.com/sezer-muhammed/Fener-Vehicle-Repo-v1)
+[Fener Vehicle ROS2](https://github.com/sezer-muhammed/Fener-Vehicle-Repo-v2)
 
 [Fener Console ROS2](https://github.com/sezer-muhammed/Fener-Console-Repo-v1)
   
