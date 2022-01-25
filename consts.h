@@ -1,9 +1,10 @@
 // This is .h file for Fener's Arduino Constants. 
 // All lenghts are milimeters(mm)
 
-#define FrontWheelMm 180    // Distance between two front wheels
-#define FrontRearMm 430     // Distance between front and back wheels
-#define WheelPerimeter 245  // Wheel Perimeter
+#define PulsePerRotate 60.0
+#define FrontWheelMm 180.0    // Distance between two front wheels
+#define FrontRearMm 430.0     // Distance between front and back wheels
+#define WheelPerimeter 245.0  // Wheel Perimeter
 
 #define LEFT_SERVO_PIN 7    // The pin number of Left Servo-Motor on the Servo Driver Card
 #define RIGHT_SERVO_PIN 5   // The pin number of Right Servo-Motor on the Servo Driver Card
