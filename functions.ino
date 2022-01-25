@@ -82,8 +82,8 @@ void update_execute_pid() {
   lr_encoder_old_counter = lr_encoder_counter;
   rr_encoder_old_counter = rr_encoder_counter;
   
-  lr_pid_input = WheelPerimeter * lr_encoder_diff / (millis() - time_) / 8.0;
-  rr_pid_input = WheelPerimeter * rr_encoder_diff / (millis() - time_) / 8.0;
+  lr_pid_input = WheelPerimeter * lr_encoder_diff / (millis() - time_) / PulsePerRotate;
+  rr_pid_input = WheelPerimeter * rr_encoder_diff / (millis() - time_) / PulsePerRotate;
   steer_pid_input = double(command_array[2]);
   
   PID_left_motor.Compute();
@@ -130,7 +130,7 @@ int update_command_array() {
 }
 
 void update_speed_setpoints(speed_values speed_req) {
-  lr_pid_setpoint = speed_req.linear;
-  rr_pid_setpoing = speed_req.linear;
+  lr_pid_setpoint = speed_req.linear * PulsePerRotate / (WheelPerimeter / 1000.0);
+  rr_pid_setpoing = speed_req.linear* PulsePerRotate / (WheelPerimeter / 1000.0);
   steer_pid_setpoing = speed_req.angular;
 }
