@@ -19,8 +19,8 @@ double lr_pid_input = 0, lr_pid_output, lr_pid_setpoint = 0;
 double rr_pid_input = 0, rr_pid_output, rr_pid_setpoing = 0;
 double steer_pid_input, steer_pid_output, steer_pid_setpoing;
 // Create PID variables with PID lib
-PID PID_left_motor(&lr_pid_input, &lr_pid_output, &lr_pid_setpoint, 17, 10, .03, DIRECT);
-PID PID_right_motor(&rr_pid_input, &rr_pid_output, &rr_pid_setpoing, 15, 7, .04, DIRECT);
+PID PID_left_motor(&lr_pid_input, &lr_pid_output, &lr_pid_setpoint, 9, 5, .03, DIRECT);
+PID PID_right_motor(&rr_pid_input, &rr_pid_output, &rr_pid_setpoing, 8, 3.4, .04, DIRECT);
 PID PID_steering(&steer_pid_input, &steer_pid_output, &steer_pid_setpoing, 0.3, 0.004, 0.05, DIRECT);
 
 //Serial communication variables
@@ -91,7 +91,7 @@ void loop() {
     speed_req = read_remote_values();
   }
   else if (drive_mode == 1) { //drive via jetson nano
-    speed_req = {command_array[0] / 100.0, (- command_array[1] + 1500) + command_array[2]};
+    speed_req = {(command_array[0] - 2048) / 100.0, (- command_array[1] + 1500) + command_array[2]};
     if (speed_req.angular == 0) PID_steering.Initialize()
   }
 
